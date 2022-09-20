@@ -22,10 +22,10 @@
 <td width="20%" bgcolor="#77BBFF">BSP Version:</td><td>default</td>
 </tr>
 <tr mode="wrap">
-<td width="20%" bgcolor="#77BBFF">BSP Generated On:</td><td>Sep 17, 2022 8:34:44 AM</td>
+<td width="20%" bgcolor="#77BBFF">BSP Generated On:</td><td>Sep 20, 2022 10:25:15 AM</td>
 </tr>
 <tr mode="wrap">
-<td width="20%" bgcolor="#77BBFF">BSP Generated Timestamp:</td><td>1663421684371</td>
+<td width="20%" bgcolor="#77BBFF">BSP Generated Timestamp:</td><td>1663687515860</td>
 </tr>
 <tr mode="wrap">
 <td width="20%" bgcolor="#77BBFF">BSP Generated Location:</td><td>C:\AlteraPrj\DE10liteEmbed\software\dhrystone_bsp</td>
@@ -38,25 +38,25 @@
 <th align="left" width="20%">Slave Descriptor</th><th align="left" width="40%">Address Range</th><th align="left" width="20%">Size</th><th align="left" width="20%">Attributes</th>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>onchip_flash_csr</td><td>0x09409248 - 0x0940924F</td><td>8</td><td class="listing">&nbsp;</td>
+<td>onchip_flash_csr</td><td>0x09411248 - 0x0941124F</td><td>8</td><td class="listing">&nbsp;</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>modular_adc_0_sequencer_csr</td><td>0x09409240 - 0x09409247</td><td>8</td><td class="listing">&nbsp;</td>
+<td>modular_adc_0_sequencer_csr</td><td>0x09411240 - 0x09411247</td><td>8</td><td class="listing">&nbsp;</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>altpll_0</td><td>0x09409230 - 0x0940923F</td><td>16</td><td class="listing">&nbsp;</td>
+<td>altpll_0</td><td>0x09411230 - 0x0941123F</td><td>16</td><td class="listing">&nbsp;</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>altpll_1</td><td>0x09409220 - 0x0940922F</td><td>16</td><td class="listing">&nbsp;</td>
+<td>altpll_1</td><td>0x09411220 - 0x0941122F</td><td>16</td><td class="listing">&nbsp;</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>spi_0</td><td>0x09409200 - 0x0940921F</td><td>32</td><td class="listing">&nbsp;</td>
+<td>spi_0</td><td>0x09411200 - 0x0941121F</td><td>32</td><td class="listing">&nbsp;</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>modular_adc_0_sample_store_csr</td><td>0x09409000 - 0x094091FF</td><td>512</td><td class="listing">&nbsp;</td>
+<td>modular_adc_0_sample_store_csr</td><td>0x09411000 - 0x094111FF</td><td>512</td><td class="listing">&nbsp;</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>onchip_ram</td><td>0x09404000 - 0x09407FFF</td><td>16384</td><td class="listing">memory</td>
+<td>onchip_ram</td><td>0x09408000 - 0x0940FFFF</td><td>32768</td><td class="listing">memory</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
 <td>onchip_flash_data</td><td>0x09200000 - 0x0935FFFF</td><td>1441792</td><td class="listing">flash, memory, non-volatile</td>
@@ -96,22 +96,22 @@
 <th align="left" width="50%">Section</th><th align="left" width="50%">Region</th>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>.text</td><td>sdram</td>
+<td>.text</td><td>onchip_ram</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>.rodata</td><td>sdram</td>
+<td>.rodata</td><td>onchip_ram</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>.rwdata</td><td>sdram</td>
+<td>.rwdata</td><td>onchip_ram</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>.bss</td><td>sdram</td>
+<td>.bss</td><td>onchip_ram</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
 <td>.heap</td><td>sdram</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>.stack</td><td>sdram</td>
+<td>.stack</td><td>onchip_ram</td>
 </tr>
 </table>
 <h3>Settings</h3>

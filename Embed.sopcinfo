@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="Embed" kind="Embed" version="1.0" fabric="QSYS">
  <!-- Format version 16.1 196 (Future versions may contain additional information.) -->
- <!-- 2022.09.16.17:11:47 -->
+ <!-- 2022.09.20.10:21:04 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1663366307</value>
+  <value>1663687263</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -6850,7 +6850,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>modular_adc_0</moduleName>
     <slaveName>sequencer_csr</slaveName>
     <name>modular_adc_0.sequencer_csr</name>
-    <baseAddress>155226688</baseAddress>
+    <baseAddress>155259456</baseAddress>
     <span>8</span>
    </memoryBlock>
   </interface>
@@ -13559,7 +13559,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.BREAK_ADDR</name>
-   <value>0x09408820</value>
+   <value>0x09410820</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.CPU_ARCH_NIOS2_R1</name>
@@ -13603,7 +13603,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.EXCEPTION_ADDR</name>
-   <value>0x09404020</value>
+   <value>0x09408020</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.FLASH_ACCELERATOR_LINES</name>
@@ -13619,7 +13619,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.HARDWARE_DIVIDE_PRESENT</name>
-   <value>0</value>
+   <value>1</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.HARDWARE_MULTIPLY_PRESENT</name>
@@ -13635,6 +13635,10 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.HAS_DEBUG_STUB</name>
+   <value></value>
+  </assignment>
+  <assignment>
+   <name>embeddedsw.CMacro.HAS_DIVISION_ERROR_EXCEPTION</name>
    <value></value>
   </assignment>
   <assignment>
@@ -13659,7 +13663,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.ICACHE_SIZE</name>
-   <value>2048</value>
+   <value>4096</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.INITDA_SUPPORTED</name>
@@ -13679,7 +13683,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.RESET_ADDR</name>
-   <value>0x09404000</value>
+   <value>0x09408000</value>
   </assignment>
   <assignment>
    <name>embeddedsw.configuration.DataCacheVictimBufImpl</name>
@@ -13731,7 +13735,11 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.altr,exception-addr</name>
-   <value>0x09404020</value>
+   <value>0x09408020</value>
+  </assignment>
+  <assignment>
+   <name>embeddedsw.dts.params.altr,has-div</name>
+   <value>1</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.altr,has-initda</name>
@@ -13747,7 +13755,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.altr,reset-addr</name>
-   <value>0x09404000</value>
+   <value>0x09408000</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.clock-frequency</name>
@@ -13767,7 +13775,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.icache-size</name>
-   <value>2048</value>
+   <value>4096</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -14303,7 +14311,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dividerType">
    <type>java.lang.String</type>
-   <value>no_div</value>
+   <value>srt2</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14375,7 +14383,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="icache_size">
    <type>int</type>
-   <value>2048</value>
+   <value>4096</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14903,7 +14911,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="resetAbsoluteAddr">
    <type>int</type>
-   <value>155205632</value>
+   <value>155222016</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14911,7 +14919,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="exceptionAbsoluteAddr">
    <type>int</type>
-   <value>155205664</value>
+   <value>155222048</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14919,7 +14927,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="breakAbsoluteAddr">
    <type>int</type>
-   <value>155224096</value>
+   <value>155256864</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -15161,7 +15169,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="instSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='sdram.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='onchip_flash.data' start='0x9200000' end='0x9360000' type='altera_onchip_flash.data' /><slave name='onchip_ram.s1' start='0x9404000' end='0x9408000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x9408800' end='0x9409000' type='altera_nios2_gen2.debug_mem_slave' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='sdram.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='onchip_flash.data' start='0x9200000' end='0x9360000' type='altera_onchip_flash.data' /><slave name='onchip_ram.s1' start='0x9408000' end='0x9410000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x9410800' end='0x9411000' type='altera_nios2_gen2.debug_mem_slave' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -15181,7 +15189,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='sdram.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='timer_0.s1' start='0x8000000' end='0x8000020' type='altera_avalon_timer.s1' /><slave name='slide_pio.s1' start='0x8000020' end='0x8000030' type='altera_avalon_pio.s1' /><slave name='led_pio.s1' start='0x8000030' end='0x8000040' type='altera_avalon_pio.s1' /><slave name='sysid.control_slave' start='0x8000040' end='0x8000048' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x8000048' end='0x8000050' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='onchip_flash.data' start='0x9200000' end='0x9360000' type='altera_onchip_flash.data' /><slave name='onchip_ram.s1' start='0x9404000' end='0x9408000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x9408800' end='0x9409000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='modular_adc_0.sample_store_csr' start='0x9409000' end='0x9409200' type='altera_modular_adc.sample_store_csr' /><slave name='spi_0.spi_control_port' start='0x9409200' end='0x9409220' type='altera_avalon_spi.spi_control_port' /><slave name='altpll_1.pll_slave' start='0x9409220' end='0x9409230' type='altpll.pll_slave' /><slave name='altpll_0.pll_slave' start='0x9409230' end='0x9409240' type='altpll.pll_slave' /><slave name='modular_adc_0.sequencer_csr' start='0x9409240' end='0x9409248' type='altera_modular_adc.sequencer_csr' /><slave name='onchip_flash.csr' start='0x9409248' end='0x9409250' type='altera_onchip_flash.csr' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='sdram.s1' start='0x4000000' end='0x8000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='timer_0.s1' start='0x8000000' end='0x8000020' type='altera_avalon_timer.s1' /><slave name='slide_pio.s1' start='0x8000020' end='0x8000030' type='altera_avalon_pio.s1' /><slave name='led_pio.s1' start='0x8000030' end='0x8000040' type='altera_avalon_pio.s1' /><slave name='sysid.control_slave' start='0x8000040' end='0x8000048' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x8000048' end='0x8000050' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='onchip_flash.data' start='0x9200000' end='0x9360000' type='altera_onchip_flash.data' /><slave name='onchip_ram.s1' start='0x9408000' end='0x9410000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x9410800' end='0x9411000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='modular_adc_0.sample_store_csr' start='0x9411000' end='0x9411200' type='altera_modular_adc.sample_store_csr' /><slave name='spi_0.spi_control_port' start='0x9411200' end='0x9411220' type='altera_avalon_spi.spi_control_port' /><slave name='altpll_1.pll_slave' start='0x9411220' end='0x9411230' type='altpll.pll_slave' /><slave name='altpll_0.pll_slave' start='0x9411230' end='0x9411240' type='altpll.pll_slave' /><slave name='modular_adc_0.sequencer_csr' start='0x9411240' end='0x9411248' type='altera_modular_adc.sequencer_csr' /><slave name='onchip_flash.csr' start='0x9411248' end='0x9411250' type='altera_onchip_flash.csr' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -15858,7 +15866,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>onchip_flash</moduleName>
     <slaveName>csr</slaveName>
     <name>onchip_flash.csr</name>
-    <baseAddress>155226696</baseAddress>
+    <baseAddress>155259464</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -15874,7 +15882,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>nios2_gen2_0</moduleName>
     <slaveName>debug_mem_slave</slaveName>
     <name>nios2_gen2_0.debug_mem_slave</name>
-    <baseAddress>155224064</baseAddress>
+    <baseAddress>155256832</baseAddress>
     <span>2048</span>
    </memoryBlock>
    <memoryBlock>
@@ -15882,7 +15890,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>altpll_0</moduleName>
     <slaveName>pll_slave</slaveName>
     <name>altpll_0.pll_slave</name>
-    <baseAddress>155226672</baseAddress>
+    <baseAddress>155259440</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -15890,7 +15898,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>altpll_1</moduleName>
     <slaveName>pll_slave</slaveName>
     <name>altpll_1.pll_slave</name>
-    <baseAddress>155226656</baseAddress>
+    <baseAddress>155259424</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -15946,8 +15954,8 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>onchip_ram</moduleName>
     <slaveName>s1</slaveName>
     <name>onchip_ram.s1</name>
-    <baseAddress>155205632</baseAddress>
-    <span>16384</span>
+    <baseAddress>155222016</baseAddress>
+    <span>32768</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -15962,7 +15970,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>modular_adc_0</moduleName>
     <slaveName>sample_store_csr</slaveName>
     <name>modular_adc_0.sample_store_csr</name>
-    <baseAddress>155226112</baseAddress>
+    <baseAddress>155258880</baseAddress>
     <span>512</span>
    </memoryBlock>
    <memoryBlock>
@@ -15970,7 +15978,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>modular_adc_0</moduleName>
     <slaveName>sequencer_csr</slaveName>
     <name>modular_adc_0.sequencer_csr</name>
-    <baseAddress>155226688</baseAddress>
+    <baseAddress>155259456</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -15978,7 +15986,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>spi_0</moduleName>
     <slaveName>spi_control_port</slaveName>
     <name>spi_0.spi_control_port</name>
-    <baseAddress>155226624</baseAddress>
+    <baseAddress>155259392</baseAddress>
     <span>32</span>
    </memoryBlock>
   </interface>
@@ -16287,7 +16295,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>nios2_gen2_0</moduleName>
     <slaveName>debug_mem_slave</slaveName>
     <name>nios2_gen2_0.debug_mem_slave</name>
-    <baseAddress>155224064</baseAddress>
+    <baseAddress>155256832</baseAddress>
     <span>2048</span>
    </memoryBlock>
    <memoryBlock>
@@ -16295,8 +16303,8 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>onchip_ram</moduleName>
     <slaveName>s1</slaveName>
     <name>onchip_ram.s1</name>
-    <baseAddress>155205632</baseAddress>
-    <span>16384</span>
+    <baseAddress>155222016</baseAddress>
+    <span>32768</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -18476,7 +18484,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.SIZE_VALUE</name>
-   <value>16384</value>
+   <value>32768</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.WRITABLE</name>
@@ -18608,7 +18616,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="memorySize">
    <type>long</type>
-   <value>16384</value>
+   <value>32768</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -18747,7 +18755,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="derived_set_addr_width">
    <type>int</type>
-   <value>12</value>
+   <value>13</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -18755,7 +18763,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="derived_set_addr_width2">
    <type>int</type>
-   <value>12</value>
+   <value>13</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -18892,7 +18900,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>16384</value>
+    <value>32768</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -18980,7 +18988,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="explicitAddressSpan">
     <type>java.math.BigInteger</type>
-    <value>16384</value>
+    <value>32768</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -19191,7 +19199,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>address</name>
     <direction>Input</direction>
-    <width>12</width>
+    <width>13</width>
     <role>address</role>
    </port>
    <port>
@@ -22026,7 +22034,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1663366307</value>
+   <value>1663687263</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -22046,7 +22054,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1663366307</value>
+   <value>1663687263</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -22062,7 +22070,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1663366307</value>
+   <value>1663687263</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -23530,7 +23538,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x09409248</value>
+   <value>0x09411248</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23632,7 +23640,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x09408800</value>
+   <value>0x09410800</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23683,7 +23691,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x09409230</value>
+   <value>0x09411230</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23734,7 +23742,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x09409220</value>
+   <value>0x09411220</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23836,7 +23844,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x09404000</value>
+   <value>0x09408000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23938,7 +23946,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x09409000</value>
+   <value>0x09411000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23989,7 +23997,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x09409240</value>
+   <value>0x09411240</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -24040,7 +24048,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x09409200</value>
+   <value>0x09411200</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -24142,7 +24150,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x09408800</value>
+   <value>0x09410800</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -24193,7 +24201,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x09404000</value>
+   <value>0x09408000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -24601,7 +24609,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x09409240</value>
+   <value>0x09411240</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

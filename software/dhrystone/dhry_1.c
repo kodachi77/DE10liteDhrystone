@@ -19,7 +19,7 @@
 #include <stdio.h>
 
 #ifndef DHRY_ITERS
-#define DHRY_ITERS 2000000
+#define DHRY_ITERS 20000000
 #endif
 
 /* Global Variables: */
@@ -288,10 +288,8 @@ int main ()
                         / (float) User_Time;
 #endif
     printf ("Microseconds for one run through Dhrystone: ");
-    //printf ("%6.1f \n", Microseconds);
     printf ("%d \n", (int)Microseconds);
     printf ("Dhrystones per Second:                      ");
-    //printf ("%6.1f \n", Dhrystones_Per_Second);
     printf ("%d \n", (int)Dhrystones_Per_Second);
     printf ("\n");
   }

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'Embed'
  * SOPC Builder design path: ../../Embed.sopcinfo
  *
- * Generated: Fri Sep 16 18:32:08 CDT 2022
+ * Generated: Tue Sep 20 10:25:16 CDT 2022
  */
 
 /*
@@ -52,14 +52,14 @@ MEMORY
 {
     sdram : ORIGIN = 0x4000000, LENGTH = 67108864
     onchip_flash_data : ORIGIN = 0x9200000, LENGTH = 1441792
-    reset : ORIGIN = 0x9404000, LENGTH = 32
-    onchip_ram : ORIGIN = 0x9404020, LENGTH = 16352
+    reset : ORIGIN = 0x9408000, LENGTH = 32
+    onchip_ram : ORIGIN = 0x9408020, LENGTH = 32736
 }
 
 /* Define symbols for each memory base-address */
 __alt_mem_sdram = 0x4000000;
 __alt_mem_onchip_flash_data = 0x9200000;
-__alt_mem_onchip_ram = 0x9404000;
+__alt_mem_onchip_ram = 0x9408000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -95,7 +95,7 @@ SECTIONS
      *
      */
 
-    .exceptions : AT ( 0x4000000 )
+    .exceptions 0x9408020 : AT ( 0x9408020 )
     {
         PROVIDE (__ram_exceptions_start = ABSOLUTE(.));
         . = ALIGN(0x20);
@@ -225,7 +225,7 @@ SECTIONS
         PROVIDE (__DTOR_END__ = ABSOLUTE(.));
         KEEP (*(.jcr))
         . = ALIGN(4);
-    } > sdram = 0x3a880100 /* NOP instruction (always in big-endian byte ordering) */
+    } > onchip_ram = 0x3a880100 /* NOP instruction (always in big-endian byte ordering) */
 
     /*
      *
@@ -242,7 +242,7 @@ SECTIONS
         *(.rodata1)
         . = ALIGN(4);
         PROVIDE (__ram_rodata_end = ABSOLUTE(.));
-    } > sdram
+    } > onchip_ram
 
     PROVIDE (__flash_rodata_start = LOADADDR(.rodata));
 
@@ -276,7 +276,7 @@ SECTIONS
         _edata = ABSOLUTE(.);
         PROVIDE (edata = ABSOLUTE(.));
         PROVIDE (__ram_rwdata_end = ABSOLUTE(.));
-    } > sdram
+    } > onchip_ram
 
     PROVIDE (__flash_rwdata_start = LOADADDR(.rwdata));
 
@@ -307,7 +307,7 @@ SECTIONS
 
         . = ALIGN(4);
         __bss_end = ABSOLUTE(.);
-    } > sdram
+    } > onchip_ram
 
     /*
      *
@@ -332,7 +332,7 @@ SECTIONS
      *
      */
 
-    .sdram LOADADDR (.bss) + SIZEOF (.bss) : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
+    .sdram : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
     {
         PROVIDE (_alt_partition_sdram_start = ABSOLUTE(.));
         *(.sdram .sdram. sdram.*)
@@ -340,7 +340,6 @@ SECTIONS
         PROVIDE (_alt_partition_sdram_end = ABSOLUTE(.));
         _end = ABSOLUTE(.);
         end = ABSOLUTE(.);
-        __alt_stack_base = ABSOLUTE(.);
     } > sdram
 
     PROVIDE (_alt_partition_sdram_load_addr = LOADADDR(.sdram));
@@ -369,12 +368,13 @@ SECTIONS
      *
      */
 
-    .onchip_ram : AT ( LOADADDR (.onchip_flash_data) + SIZEOF (.onchip_flash_data) )
+    .onchip_ram LOADADDR (.onchip_flash_data) + SIZEOF (.onchip_flash_data) : AT ( LOADADDR (.onchip_flash_data) + SIZEOF (.onchip_flash_data) )
     {
         PROVIDE (_alt_partition_onchip_ram_start = ABSOLUTE(.));
         *(.onchip_ram .onchip_ram. onchip_ram.*)
         . = ALIGN(4);
         PROVIDE (_alt_partition_onchip_ram_end = ABSOLUTE(.));
+        __alt_stack_base = ABSOLUTE(.);
     } > onchip_ram
 
     PROVIDE (_alt_partition_onchip_ram_load_addr = LOADADDR(.onchip_ram));
@@ -426,7 +426,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x8000000;
+__alt_data_end = 0x9410000;
 
 /*
  * The next two symbols define the location of the default stack.  You can

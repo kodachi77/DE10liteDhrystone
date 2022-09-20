@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Sep 17, 2022 8:34:44 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1663421684371</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Sep 20, 2022 10:25:15 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1663687515860</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\AlteraPrj\DE10liteEmbed\software\dhrystone_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\Embed.sopcinfo</SopcDesignFile>
@@ -942,61 +942,61 @@
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>onchip_ram</slaveDescriptor>
-                <addressRange>0x09404000 - 0x09407FFF</addressRange>
-                <addressSpan>16384</addressSpan>
+                <addressRange>0x09408000 - 0x0940FFFF</addressRange>
+                <addressSpan>32768</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>modular_adc_0_sample_store_csr</slaveDescriptor>
-                <addressRange>0x09409000 - 0x094091FF</addressRange>
+                <addressRange>0x09411000 - 0x094111FF</addressRange>
                 <addressSpan>512</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>spi_0</slaveDescriptor>
-                <addressRange>0x09409200 - 0x0940921F</addressRange>
+                <addressRange>0x09411200 - 0x0941121F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>altpll_1</slaveDescriptor>
-                <addressRange>0x09409220 - 0x0940922F</addressRange>
+                <addressRange>0x09411220 - 0x0941122F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>altpll_0</slaveDescriptor>
-                <addressRange>0x09409230 - 0x0940923F</addressRange>
+                <addressRange>0x09411230 - 0x0941123F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>modular_adc_0_sequencer_csr</slaveDescriptor>
-                <addressRange>0x09409240 - 0x09409247</addressRange>
+                <addressRange>0x09411240 - 0x09411247</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>onchip_flash_csr</slaveDescriptor>
-                <addressRange>0x09409248 - 0x0940924F</addressRange>
+                <addressRange>0x09411248 - 0x0941124F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>
-                <regionName>sdram</regionName>
+                <regionName>onchip_ram</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rodata</sectionName>
-                <regionName>sdram</regionName>
+                <regionName>onchip_ram</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rwdata</sectionName>
-                <regionName>sdram</regionName>
+                <regionName>onchip_ram</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.bss</sectionName>
-                <regionName>sdram</regionName>
+                <regionName>onchip_ram</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.heap</sectionName>
@@ -1004,6 +1004,6 @@
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.stack</sectionName>
-                <regionName>sdram</regionName>
+                <regionName>onchip_ram</regionName>
         </LinkerSection>
 </sch:Settings>
