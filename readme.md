@@ -50,13 +50,14 @@ Compiling these designs in Quartus Prime Lite 16.1 produces the following result
 
 | Model                 | f_max "minimal" | f_max "default" |
 | --------------------- | --------------- | --------------- |
-| Slow 1200mV 85C Model | 121.94MHz       | 113.33MHz       |
-| Slow 1200mV 0C Model  | 132.07MHz       | 124.36MHz       |
+| Slow 1200mV 85C Model | 121.94MHz       | 110.45MHz       |
+| Slow 1200mV 0C Model  | 132.07MHz       | 121.37MHz       |
 
 
 ## Software details
 
-Software contains Dhrystone benchmark modified to run on Nios II CPU. Project is compiled with `-O3` and `-DREG` settings.
+Software contains Dhrystone benchmark modified to run on Nios II CPU. "Minimal" design software is compiled with `-O3` and `-DREG` settings. "Default" design doesn't use `-DREG` to improve performance.
+
 We run 20'000'000 iterations of the test.
 
 ## Benchmark results
@@ -69,16 +70,13 @@ As you can see below, we are getting around 110 DMIPS which is significantly bet
     DMIPS:                                 110.483
     DMIPS/MHz Ratio:                       0.921
 
-Intel [Performance Benchmark](doc/ds_nios2_perf-2016.06.24.pdf) from 2016 shows core performance of 0.9 DMIPS/MHz. Our 
-result is a little bit better. 
-
-Our "default" design produces results that are very close to the number from 2020 [Performance Benchmark](doc/ds_nios2_perf-2020.05.14.pdf) document, which is 0.753.
+Intel [Performance Benchmark](doc/ds_nios2_perf-2016.06.24.pdf) from 2016 shows core performance of 0.9 DMIPS/MHz. Our result is a little bit better. "Default" design produces virtually identical results (see below).		
 
 ```
-Microseconds to run through Dhrystone: 7
-Dhrystones per second:                 127685
-DMIPS:                                 72.672
-DMIPS/MHz Ratio:                       0.727
+Microseconds to run through Dhrystone: 6
+Dhrystones per second:                 161773
+DMIPS:                                 92.073
+DMIPS/MHz Ratio:                       0.921
 ```
 
 
