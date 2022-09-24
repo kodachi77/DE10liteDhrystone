@@ -18,14 +18,8 @@
 #include "dhry.h"
 #include <stdio.h>
 
-#ifdef __nios2_arch__
-#include "io.h"
-#include "system.h"
-		/* for IORD and KEY_BASE */
-#endif
-
 #ifndef DHRY_ITERS
-#define DHRY_ITERS 2000000
+#define DHRY_ITERS 20000000
 #endif
 
 /* Global Variables: */
@@ -143,25 +137,7 @@ int main ()
     printf ("\n");
   }
 
-  Extended_Test = false;
-
-#ifdef __nios2_arch__
-  alt_u8                Button_Status;
-  const alt_u8          Button_Mask = 0x03; // 2 button
-
-  printf("\n==========================================================\n");
-  printf("Press any KEY to start test [KEY0 for extended test]\n");
-  Button_Status = Button_Mask;
-  while((Button_Status & Button_Mask) == Button_Mask) {
-      Button_Status = IORD(KEY_BASE, 0);
-  }
-
-  if ((Button_Status & 0x01) == 0x00) {
-    Extended_Test = true;
-  }
-#endif
-
-  Number_Of_Runs = Extended_Test ? DHRY_ITERS*10 : DHRY_ITERS;
+  Number_Of_Runs = DHRY_ITERS;
 
   printf ("Execution starts, %d runs through Dhrystone\n", Number_Of_Runs);
 
