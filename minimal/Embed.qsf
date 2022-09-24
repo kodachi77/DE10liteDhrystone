@@ -1,0 +1,301 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2016  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Intel and sold by Intel or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+# Date created = 17:33:08  September 15, 2022
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#       Embed_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#       assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:35:21 JUNE 13,2016"
+set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_N5 -to ADC_CLK_10
+set_location_assignment PIN_P11 -to MAX10_CLK1_50
+set_location_assignment PIN_N14 -to MAX10_CLK2_50
+set_location_assignment PIN_U17 -to DRAM_ADDR[0]
+set_location_assignment PIN_W19 -to DRAM_ADDR[1]
+set_location_assignment PIN_V18 -to DRAM_ADDR[2]
+set_location_assignment PIN_U18 -to DRAM_ADDR[3]
+set_location_assignment PIN_U19 -to DRAM_ADDR[4]
+set_location_assignment PIN_T18 -to DRAM_ADDR[5]
+set_location_assignment PIN_T19 -to DRAM_ADDR[6]
+set_location_assignment PIN_R18 -to DRAM_ADDR[7]
+set_location_assignment PIN_P18 -to DRAM_ADDR[8]
+set_location_assignment PIN_P19 -to DRAM_ADDR[9]
+set_location_assignment PIN_T20 -to DRAM_ADDR[10]
+set_location_assignment PIN_P20 -to DRAM_ADDR[11]
+set_location_assignment PIN_R20 -to DRAM_ADDR[12]
+set_location_assignment PIN_T21 -to DRAM_BA[0]
+set_location_assignment PIN_T22 -to DRAM_BA[1]
+set_location_assignment PIN_U21 -to DRAM_CAS_N
+set_location_assignment PIN_N22 -to DRAM_CKE
+set_location_assignment PIN_L14 -to DRAM_CLK
+set_location_assignment PIN_U20 -to DRAM_CS_N
+set_location_assignment PIN_Y21 -to DRAM_DQ[0]
+set_location_assignment PIN_Y20 -to DRAM_DQ[1]
+set_location_assignment PIN_AA22 -to DRAM_DQ[2]
+set_location_assignment PIN_AA21 -to DRAM_DQ[3]
+set_location_assignment PIN_Y22 -to DRAM_DQ[4]
+set_location_assignment PIN_W22 -to DRAM_DQ[5]
+set_location_assignment PIN_W20 -to DRAM_DQ[6]
+set_location_assignment PIN_V21 -to DRAM_DQ[7]
+set_location_assignment PIN_P21 -to DRAM_DQ[8]
+set_location_assignment PIN_J22 -to DRAM_DQ[9]
+set_location_assignment PIN_H21 -to DRAM_DQ[10]
+set_location_assignment PIN_H22 -to DRAM_DQ[11]
+set_location_assignment PIN_G22 -to DRAM_DQ[12]
+set_location_assignment PIN_G20 -to DRAM_DQ[13]
+set_location_assignment PIN_G19 -to DRAM_DQ[14]
+set_location_assignment PIN_F22 -to DRAM_DQ[15]
+set_location_assignment PIN_V22 -to DRAM_LDQM
+set_location_assignment PIN_U22 -to DRAM_RAS_N
+set_location_assignment PIN_J21 -to DRAM_UDQM
+set_location_assignment PIN_V20 -to DRAM_WE_N
+set_location_assignment PIN_B8 -to KEY[0]
+set_location_assignment PIN_A7 -to KEY[1]
+
+# Classic Timing Assignments
+# ==========================
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name TIMEQUEST_DO_REPORT_TIMING ON
+
+# Compiler Assignments
+# ====================
+set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name TOP_LEVEL_ENTITY DE10_LITE_Minimal
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE 10M50DAF484C6GES
+set_global_assignment -name INTERNAL_FLASH_UPDATE_MODE "SINGLE IMAGE WITH ERAM"
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+
+# EDA Netlist Writer Assignments
+# ==============================
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
+set_global_assignment -name EDA_BOARD_DESIGN_TIMING_TOOL "<None>"
+set_global_assignment -name EDA_BOARD_DESIGN_SYMBOL_TOOL "<None>"
+set_global_assignment -name EDA_BOARD_DESIGN_SIGNAL_INTEGRITY_TOOL "<None>"
+
+# Assembler Assignments
+# =====================
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name EXTERNAL_FLASH_FALLBACK_ADDRESS 00000000
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+
+# SignalTap II Assignments
+# ========================
+set_global_assignment -name ENABLE_LOGIC_ANALYZER_INTERFACE OFF
+
+# Power Estimation Assignments
+# ============================
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+# Advanced I/O Timing Assignments
+# ===============================
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+
+# start EDA_TOOL_SETTINGS(eda_simulation)
+# ---------------------------------------
+
+# EDA Netlist Writer Assignments
+# ==============================
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_simulation
+
+# end EDA_TOOL_SETTINGS(eda_simulation)
+# -------------------------------------
+
+# start EDA_TOOL_SETTINGS(eda_board_design_timing)
+# ------------------------------------------------
+
+# EDA Netlist Writer Assignments
+# ==============================
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_board_design_timing
+
+# end EDA_TOOL_SETTINGS(eda_board_design_timing)
+# ----------------------------------------------
+
+# start EDA_TOOL_SETTINGS(eda_board_design_symbol)
+# ------------------------------------------------
+
+# EDA Netlist Writer Assignments
+# ==============================
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_board_design_symbol
+
+# end EDA_TOOL_SETTINGS(eda_board_design_symbol)
+# ----------------------------------------------
+
+# start EDA_TOOL_SETTINGS(eda_board_design_signal_integrity)
+# ----------------------------------------------------------
+
+# EDA Netlist Writer Assignments
+# ==============================
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_board_design_signal_integrity
+
+# end EDA_TOOL_SETTINGS(eda_board_design_signal_integrity)
+# --------------------------------------------------------
+
+# -------------------------------
+# start ENTITY(DE10_LITE_Default)
+
+# Fitter Assignments
+# ==================
+
+# start DESIGN_PARTITION(Top)
+# ---------------------------
+
+# Incremental Compilation Assignments
+# ===================================
+
+# end DESIGN_PARTITION(Top)
+# -------------------------
+
+# end ENTITY(DE10_LITE_Default)
+# -----------------------------
+set_global_assignment -name ROUTER_CLOCKING_TOPOLOGY_ANALYSIS ON
+set_global_assignment -name ECO_OPTIMIZE_TIMING ON
+set_global_assignment -name VERILOG_FILE DE10_LITE_Minimal.v
+set_global_assignment -name SDC_FILE DE10_LITE_Minimal.sdc
+set_global_assignment -name QIP_FILE Embed/synthesis/Embed.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK1_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK2_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CKE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_LDQM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_RAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_UDQM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_WE_N
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[11]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[10]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[9]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_ADDR[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_BA[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_BA[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_CAS_N
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_CKE
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_CLK
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_CS_N
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[15]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[14]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[13]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[11]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[10]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[9]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_DQ[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_LDQM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_RAS_N
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_UDQM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DRAM_WE_N
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to KEY[0]
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to KEY[1]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
