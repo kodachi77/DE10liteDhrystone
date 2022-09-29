@@ -101,8 +101,6 @@ int main ()
         Str_30          Str_2_Loc;
   REG   int             Run_Index;
   REG   int             Number_Of_Runs;
-  
-  Boolean               Extended_Test;
 
   /* Initializations */
 

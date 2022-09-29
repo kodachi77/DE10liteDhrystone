@@ -20,6 +20,16 @@ if( $in -eq '1' ) {
 	
 	& ($PSScriptRoot + '\setup-environment.ps1') -proj_name Embed
 	& ($PSScriptRoot + '\build-hardware.ps1') -proj_name Embed
+	& ($PSScriptRoot + '\build-software.ps1') -proj_name Embed -user_defines "-DREG"
+}
+
+if( $in -eq '2' ) {
+	$cwd_new = Convert-Path -Path '.\default'
+	Set-Location -Path $cwd_new
+	
+	& ($PSScriptRoot + '\setup-environment.ps1') -proj_name Embed
+	& ($PSScriptRoot + '\build-hardware.ps1') -proj_name Embed
 	& ($PSScriptRoot + '\build-software.ps1') -proj_name Embed
 }
+
 Set-Location -Path $cwd_old

@@ -48,8 +48,8 @@ Compiling these designs in Quartus Prime Lite 16.1 produces the following result
 
 | Model                 | f_max "minimal" | f_max "default" |
 | --------------------- | --------------- | --------------- |
-| Slow 1200mV 85C Model | 126.97MHz       | 110.45MHz       |
-| Slow 1200mV 0C Model  | 140.25MHz       | 121.37MHz       |
+| Slow 1200mV 85C Model | 126.97MHz       | 111.23MHz       |
+| Slow 1200mV 0C Model  | 140.25MHz       | 121.89MHz       |
 
 
 ## Software details

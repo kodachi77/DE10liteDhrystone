@@ -93,6 +93,7 @@ if( -not $qsys_root ) {
 	}
 	else {
 		Write-Error "Cannot find QSys (Platform Designer) installation folder."
+		Exit
 	}
 }
 
@@ -102,6 +103,9 @@ if( -not (Test-Path -Path $quartus_bin -PathType Container) ) {
 }
 
 $sopc_bin = ("{0}\sdk2\bin" -f $sopc_kit)
+
+[System.Environment]::SetEnvironmentVariable('_QUARTUS_BIN', $quartus_bin, 'Process')
+[System.Environment]::SetEnvironmentVariable('_SOPC_BIN', $sopc_bin, 'Process')
 
 $path = [Environment]::GetEnvironmentVariable("PATH", 'Process')
 
