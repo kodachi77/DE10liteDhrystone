@@ -51,10 +51,15 @@ Compiling these designs in Quartus Prime Lite 16.1 produces the following result
 | Slow 1200mV 85C Model | 126.97MHz       | 111.23MHz       |
 | Slow 1200mV 0C Model  | 140.25MHz       | 121.89MHz       |
 
+## Installation
+
+To build both designs use `build.bat` file. 
+
+Use `run.bat` to download hardware and software to the device and run Dhrystone test. Please note that in free version of Quartus you will have to use GUI version of the programmer and press 'Start' button to upload the `.sof` image manually.
 
 ## Software details
 
-Software contains Dhrystone benchmark modified to run on Nios II CPU. "Minimal" design software is compiled with `-O3` and `-DREG` settings. "Default" design doesn't use `-DREG` to improve performance.
+Software contains Dhrystone benchmark v 2.1 modified to run on Nios II CPU. "Minimal" design software is compiled with `-O3` and `-DREG` settings. "Default" design doesn't use `-DREG` to improve performance.
 
 We run 20'000'000 iterations of the test.
 
