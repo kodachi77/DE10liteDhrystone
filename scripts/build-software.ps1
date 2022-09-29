@@ -14,7 +14,7 @@ if( -not (Test-Path -Path $bsp_dir -PathType Container) ) {
 }
 
 nios2-bsp-create-settings --bsp-dir $bsp_dir --settings $bsp_settings  --sopc "$proj_name.sopcinfo"  --type "hal" --script "$sopc_bin\bsp-set-defaults.tcl" --cpu-name "nios2_gen2_0"
-nios2-bsp-update-settings --bsp-dir $bsp_dir --settings $bsp_settings --script "bsp-update.tcl"
+nios2-bsp-update-settings --bsp-dir $bsp_dir --settings $bsp_settings --script "..\scripts\bsp-update.tcl"
 nios2-bsp-generate-files  --bsp-dir $bsp_dir --settings $bsp_settings
 
 nios2-app-generate-makefile --bsp-dir $bsp_dir --app-dir $app_dir --elf-name "dhrystone.elf"  --src-files dhry_1.c dhry_2.c

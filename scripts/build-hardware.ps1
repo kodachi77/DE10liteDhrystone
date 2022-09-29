@@ -13,7 +13,7 @@ quartus_map --read_settings_files=on  --write_settings_files=off $proj_name -c $
 quartus_fit --read_settings_files=off --write_settings_files=off $proj_name -c $proj_name
 quartus_asm --read_settings_files=off --write_settings_files=off $proj_name -c $proj_name
 quartus_sta $proj_name -c $proj_name
-quartus_sta -t timing-report.tcl $proj_name
+quartus_sta -t ..\scripts\timing-report.tcl $proj_name
 
 $sof_file = ("output_files/{0}_time_limited.sof" -f $proj_name)
 if( -not (Test-Path -Path $sof_file -PathType Leaf) ) {
