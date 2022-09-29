@@ -29,7 +29,7 @@ if ($quartus_root_sys -and $quartus_root_usr) {
 	}
 
 	if( -not $in ) {
-		Write-Output "More than 2 Quartus installations found."
+		Write-Output "More than 1 Quartus installation found."
 		Write-Output "Please specify which one to use (q to exit):"
 		Write-Output (" 1. {0}" -f $quartus_root_usr)
 		Write-Output (" 2. {0}" -f $quartus_root_sys)
@@ -124,7 +124,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off $proj_name -c $
 quartus_asm --read_settings_files=off --write_settings_files=off $proj_name -c $proj_name
 quartus_sta $proj_name -c $proj_name
 quartus_sta -t timing-report.tcl $proj_name
-#quartus_eda --read_settings_files=on  --write_settings_files=off $proj_name -c $proj_name
 
 $sof_file = ("output_files/{0}_time_limited.sof" -f $proj_name)
 if( -not (Test-Path -Path $sof_file -PathType Leaf) ) {
