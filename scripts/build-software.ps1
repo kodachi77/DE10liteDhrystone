@@ -36,5 +36,5 @@ $command_shell_path = '/cygdrive/' + (Split-Path $tmp -Qualifier).ToLower()[0] +
 Start-Process -FilePath "$quartus_bin\cygwin\bin\bash.exe" -ArgumentList @($command_shell_path, "make", "-C", "$app_dir") -NoNewWindow -Wait
 
 if( Test-Path -Path "$app_dir\dhrystone.elf" -PathType Leaf ) {
-	Copy-Item "$app_dir\dhrystone.elf" -Destination "demo_batch" -Force
+	Copy-Item "$app_dir\dhrystone.elf" -Destination "demo" -Force
 }

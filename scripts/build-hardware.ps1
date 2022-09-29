@@ -23,5 +23,5 @@ if( -not (Test-Path -Path $sof_file -PathType Leaf) ) {
 	$sof_file = ("output_files/{0}.sof" -f $proj_name)
 }
 if( Test-Path -Path $sof_file -PathType Leaf ) {
-	Copy-Item ($sof_file) -Destination "demo_batch" -Force
+	Copy-Item ($sof_file) -Destination "demo" -Force
 }

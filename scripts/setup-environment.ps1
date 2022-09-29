@@ -5,10 +5,17 @@ param(
 
 Write-Output "**** Running setup-environment.ps1 ****"
 
-$project_version = ""
-$version_re = "QUARTUS_VERSION\s+=\s+`"(.+)`""
-Get-Content "$proj_name.qpf" | Where-Object {$_ -match $version_re} | ForEach-Object {
-	$project_version = $Matches[1]
+$project_file = "$proj_name.qpf"
+if( -not (Test-Path -Path "$project_file" -PathType Leaf) ) {
+	$project_file = "..\$proj_name.qpf"
+}
+
+$project_version = "16.1"
+if( Test-Path -Path "$project_file" -PathType Leaf ) {
+	$version_re = "QUARTUS_VERSION\s+=\s+`"(.+)`""
+	Get-Content "$project_file" | Where-Object {$_ -match $version_re} | ForEach-Object {
+		$project_version = $Matches[1]
+	}
 }
 
 $quartus_root_sys = [System.Environment]::GetEnvironmentVariable('QUARTUS_ROOTDIR', 'Machine')
