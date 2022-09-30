@@ -1,14 +1,14 @@
 module vga_generator #(
-    H_RES=640,
-    V_RES=480,
-    H_FPORCH=16,
-    H_SYNC=96,
-    H_BPORCH=48,
-    V_FPORCH=10,
-    V_SYNC=2,
-    V_BPORCH=33,
-    H_POL=0,                        // horizontal sync polarity (0:neg, 1:pos)
-    V_POL=0                         // vertical sync polarity (0:neg, 1:pos)
+    signed [15:0] H_RES = 640,
+    signed [15:0] V_RES = 480,
+    signed [15:0] H_FPORCH = 16,
+    signed [15:0] H_SYNC = 96,
+    signed [15:0] H_BPORCH = 48,
+    signed [15:0] V_FPORCH = 10,
+    signed [15:0] V_SYNC = 2,
+    signed [15:0] V_BPORCH = 33,
+    H_POL = 0,                      // horizontal sync polarity (0:neg, 1:pos)
+    V_POL = 0                       // vertical sync polarity (0:neg, 1:pos)
     )
     (
     input  wire i_clk,

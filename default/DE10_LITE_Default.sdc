@@ -7,8 +7,9 @@ create_clock -period "50.0 MHz" [get_ports MAX10_CLK2_50]
 
 # SDRAM CLK
 create_generated_clock -source [get_pins {u0|altpll_0|sd1|pll7|clk[1]}] -name clk_dram_ext [get_ports {DRAM_CLK}]
+create_generated_clock -source [get_pins {u0|onchip_flash|avmm_data_controller|flash_se_neg_reg|clk}] -name flash_se_neg_reg -divide_by 2 [get_pins {u0|onchip_flash|avmm_data_controller|flash_se_neg_reg|q}]
 
-# u0|onchip_flash|altera_onchip_flash_block|ufm_block|osc
+create_clock -period "30.303 ns" -name {altera_reserved_tck} {altera_reserved_tck}
 
 #**************************************************************
 # Create Generated Clock
@@ -72,9 +73,9 @@ set_false_path -from * -to [get_ports HEX5*]
 set_false_path -from [get_ports {KEY[0] KEY[1]}] -to *
 set_false_path -from [get_ports SW*] -to *
 
-#set_false_path -from * -to [get_ports altera_reserved_tdo]
-#set_false_path -from [get_ports altera_reserved_tdi] -to *
-#set_false_path -from [get_ports altera_reserved_tms] -to *
+set_false_path -from * -to [get_ports altera_reserved_tdo]
+set_false_path -from [get_ports altera_reserved_tdi] -to *
+set_false_path -from [get_ports altera_reserved_tms] -to *
 
 #**************************************************************
 # Set Multicycle Path
