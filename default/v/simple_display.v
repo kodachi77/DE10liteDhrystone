@@ -33,8 +33,8 @@ module simple_display #(
 				
             if (frame_cnt == FRAME_CNT-1) begin
                frame_cnt <= 0;
-               color_idx <= (color_inc) ? color_idx + 1 : color_idx - 1;
-            end else frame_cnt <= frame_cnt + 1;
+               color_idx <= (color_inc) ? color_idx + 4'b01 : color_idx - 4'b01;
+            end else frame_cnt <= frame_cnt + 4'b01;
         end
     end
 

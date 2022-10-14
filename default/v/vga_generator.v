@@ -21,17 +21,17 @@ module vga_generator #(
     output reg signed [15:0] o_sy   // y-coord, includes blanking
     );
 
-    localparam signed [15:0] H_START  = 0 - H_FPORCH - H_SYNC - H_BPORCH;
+    localparam signed [15:0] H_START  = 16'b0 - H_FPORCH - H_SYNC - H_BPORCH;
     localparam signed [15:0] H_SYNC_START = H_START + H_FPORCH;
     localparam signed [15:0] H_SYNC_END = H_SYNC_START + H_SYNC;
-    localparam signed [15:0] H_ACTIVE_START = 0;
-    localparam signed [15:0] H_ACTIVE_END = H_RES - 1;
+    localparam signed [15:0] H_ACTIVE_START = 16'b0;
+    localparam signed [15:0] H_ACTIVE_END = H_RES - 16'b01;
 
-    localparam signed [15:0] V_START  = 0 - V_FPORCH - V_SYNC - V_BPORCH;
+    localparam signed [15:0] V_START  = 16'b0 - V_FPORCH - V_SYNC - V_BPORCH;
     localparam signed [15:0] V_SYNC_START = V_START + V_FPORCH; 
     localparam signed [15:0] V_SYNC_END = V_SYNC_START + V_SYNC;
-    localparam signed [15:0] V_ACTIVE_START = 0;
-    localparam signed [15:0] V_ACTIVE_END = V_RES - 1;
+    localparam signed [15:0] V_ACTIVE_START = 16'b0;
+    localparam signed [15:0] V_ACTIVE_END = V_RES - 16'b01;
 
     assign o_hs = H_POL ? (o_sx > H_SYNC_START && o_sx <= H_SYNC_END)
         : ~(o_sx > H_SYNC_START && o_sx <= H_SYNC_END);
